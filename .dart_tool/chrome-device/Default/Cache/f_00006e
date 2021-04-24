@@ -1,0 +1,506 @@
+define(['dart_sdk', 'packages/quiz_dev/core/app_colors.dart', 'packages/quiz_dev/core/app_text_styles.dart', 'packages/flutter/src/material/icons.dart', 'packages/flutter/src/widgets/widget_span.dart', 'packages/flutter/src/painting/edge_insets.dart', 'packages/flutter/src/painting/box_decoration.dart', 'packages/flutter/src/painting/border_radius.dart', 'packages/flutter/src/painting/box_border.dart', 'packages/flutter/src/painting/borders.dart', 'packages/flutter/src/rendering/flex.dart', 'packages/flutter/src/widgets/icon.dart', 'packages/flutter/src/material/colors.dart', 'packages/flutter/src/painting/strut_style.dart', 'packages/flutter/src/widgets/icon_data.dart', 'packages/quiz_dev/global/models/answer_model.dart'], (function load__packages__quiz_dev__pages__challenge__widgets__answer__answer_dart(dart_sdk, packages__quiz_dev__core__app_colors$46dart, packages__quiz_dev__core__app_text_styles$46dart, packages__flutter__src__material__icons$46dart, packages__flutter__src__widgets__widget_span$46dart, packages__flutter__src__painting__edge_insets$46dart, packages__flutter__src__painting__box_decoration$46dart, packages__flutter__src__painting__border_radius$46dart, packages__flutter__src__painting__box_border$46dart, packages__flutter__src__painting__borders$46dart, packages__flutter__src__rendering__flex$46dart, packages__flutter__src__widgets__icon$46dart, packages__flutter__src__material__colors$46dart, packages__flutter__src__painting__strut_style$46dart, packages__flutter__src__widgets__icon_data$46dart, packages__quiz_dev__global__models__answer_model$46dart) {
+  'use strict';
+  const core = dart_sdk.core;
+  const _interceptors = dart_sdk._interceptors;
+  const ui = dart_sdk.ui;
+  const dart = dart_sdk.dart;
+  const dartx = dart_sdk.dartx;
+  const app_colors = packages__quiz_dev__core__app_colors$46dart.core__app_colors;
+  const app_text_styles = packages__quiz_dev__core__app_text_styles$46dart.core__app_text_styles;
+  const icons = packages__flutter__src__material__icons$46dart.src__material__icons;
+  const basic = packages__flutter__src__widgets__widget_span$46dart.src__widgets__basic;
+  const gesture_detector = packages__flutter__src__widgets__widget_span$46dart.src__widgets__gesture_detector;
+  const container = packages__flutter__src__widgets__widget_span$46dart.src__widgets__container;
+  const text = packages__flutter__src__widgets__widget_span$46dart.src__widgets__text;
+  const widget_inspector = packages__flutter__src__widgets__widget_span$46dart.src__widgets__widget_inspector;
+  const framework = packages__flutter__src__widgets__widget_span$46dart.src__widgets__framework;
+  const edge_insets = packages__flutter__src__painting__edge_insets$46dart.src__painting__edge_insets;
+  const box_decoration = packages__flutter__src__painting__box_decoration$46dart.src__painting__box_decoration;
+  const border_radius = packages__flutter__src__painting__border_radius$46dart.src__painting__border_radius;
+  const box_border = packages__flutter__src__painting__box_border$46dart.src__painting__box_border;
+  const borders = packages__flutter__src__painting__borders$46dart.src__painting__borders;
+  const flex = packages__flutter__src__rendering__flex$46dart.src__rendering__flex;
+  const icon = packages__flutter__src__widgets__icon$46dart.src__widgets__icon;
+  const colors = packages__flutter__src__material__colors$46dart.src__material__colors;
+  const text_style = packages__flutter__src__painting__strut_style$46dart.src__painting__text_style;
+  const icon_data = packages__flutter__src__widgets__icon_data$46dart.src__widgets__icon_data;
+  const answer_model = packages__quiz_dev__global__models__answer_model$46dart.global__models__answer_model;
+  var answer$ = Object.create(dart.library);
+  dart._checkModuleNullSafetyMode(true);
+  var T = {
+    JSArrayOfWidget: () => (T.JSArrayOfWidget = dart.constFn(_interceptors.JSArray$(framework.Widget)))()
+  };
+  var T$Eval = Object.assign({
+    _: () => T$Eval
+  }, T);
+  var S = {
+    _: () => S
+  };
+  var S$Eval = Object.assign({
+    _: () => S$Eval
+  }, S);
+  const CT = Object.create({
+    _: () => (C, CT)
+  });
+  dart.defineLazy(CT, {
+    get C0() {
+      return C[0] = dart.const({
+        __proto__: edge_insets.EdgeInsets.prototype,
+        [EdgeInsets_bottom]: 4,
+        [EdgeInsets_right]: 16,
+        [EdgeInsets_top]: 4,
+        [EdgeInsets_left]: 16
+      });
+    },
+    get C3() {
+      return C[3] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "data",
+        [_Location_column]: 28,
+        [_Location_line]: 62,
+        [_Location_file]: null
+      });
+    },
+    get C4() {
+      return C[4] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "style",
+        [_Location_column]: 21,
+        [_Location_line]: 63,
+        [_Location_file]: null
+      });
+    },
+    get C2() {
+      return C[2] = dart.constList([C[3] || CT.C3, C[4] || CT.C4], widget_inspector._Location);
+    },
+    get C1() {
+      return C[1] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[2] || CT.C2,
+        [_Location_name]: null,
+        [_Location_column]: 26,
+        [_Location_line]: 61,
+        [_Location_file]: "file:///C:/Users/User/Desktop/Projetos/Projetos%20Mobile/quiz/lib/pages/challenge/widgets/answer/answer.dart"
+      });
+    },
+    get C7() {
+      return C[7] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 19,
+        [_Location_line]: 61,
+        [_Location_file]: null
+      });
+    },
+    get C6() {
+      return C[6] = dart.constList([C[7] || CT.C7], widget_inspector._Location);
+    },
+    get C5() {
+      return C[5] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[6] || CT.C6,
+        [_Location_name]: null,
+        [_Location_column]: 17,
+        [_Location_line]: 60,
+        [_Location_file]: "file:///C:/Users/User/Desktop/Projetos/Projetos%20Mobile/quiz/lib/pages/challenge/widgets/answer/answer.dart"
+      });
+    },
+    get C10() {
+      return C[10] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "icon",
+        [_Location_column]: 27,
+        [_Location_line]: 84,
+        [_Location_file]: null
+      });
+    },
+    get C11() {
+      return C[11] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "size",
+        [_Location_column]: 27,
+        [_Location_line]: 85,
+        [_Location_file]: null
+      });
+    },
+    get C12() {
+      return C[12] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "color",
+        [_Location_column]: 27,
+        [_Location_line]: 86,
+        [_Location_file]: null
+      });
+    },
+    get C9() {
+      return C[9] = dart.constList([C[10] || CT.C10, C[11] || CT.C11, C[12] || CT.C12], widget_inspector._Location);
+    },
+    get C8() {
+      return C[8] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[9] || CT.C9,
+        [_Location_name]: null,
+        [_Location_column]: 25,
+        [_Location_line]: 83,
+        [_Location_file]: "file:///C:/Users/User/Desktop/Projetos/Projetos%20Mobile/quiz/lib/pages/challenge/widgets/answer/answer.dart"
+      });
+    },
+    get C15() {
+      return C[15] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "height",
+        [_Location_column]: 19,
+        [_Location_line]: 69,
+        [_Location_file]: null
+      });
+    },
+    get C16() {
+      return C[16] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "width",
+        [_Location_column]: 19,
+        [_Location_line]: 70,
+        [_Location_file]: null
+      });
+    },
+    get C17() {
+      return C[17] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "decoration",
+        [_Location_column]: 19,
+        [_Location_line]: 71,
+        [_Location_file]: null
+      });
+    },
+    get C18() {
+      return C[18] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 19,
+        [_Location_line]: 82,
+        [_Location_file]: null
+      });
+    },
+    get C14() {
+      return C[14] = dart.constList([C[15] || CT.C15, C[16] || CT.C16, C[17] || CT.C17, C[18] || CT.C18], widget_inspector._Location);
+    },
+    get C13() {
+      return C[13] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[14] || CT.C14,
+        [_Location_name]: null,
+        [_Location_column]: 17,
+        [_Location_line]: 68,
+        [_Location_file]: "file:///C:/Users/User/Desktop/Projetos/Projetos%20Mobile/quiz/lib/pages/challenge/widgets/answer/answer.dart"
+      });
+    },
+    get C21() {
+      return C[21] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "mainAxisAlignment",
+        [_Location_column]: 15,
+        [_Location_line]: 58,
+        [_Location_file]: null
+      });
+    },
+    get C22() {
+      return C[22] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "children",
+        [_Location_column]: 15,
+        [_Location_line]: 59,
+        [_Location_file]: null
+      });
+    },
+    get C20() {
+      return C[20] = dart.constList([C[21] || CT.C21, C[22] || CT.C22], widget_inspector._Location);
+    },
+    get C19() {
+      return C[19] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[20] || CT.C20,
+        [_Location_name]: null,
+        [_Location_column]: 20,
+        [_Location_line]: 57,
+        [_Location_file]: "file:///C:/Users/User/Desktop/Projetos/Projetos%20Mobile/quiz/lib/pages/challenge/widgets/answer/answer.dart"
+      });
+    },
+    get C25() {
+      return C[25] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "padding",
+        [_Location_column]: 13,
+        [_Location_line]: 49,
+        [_Location_file]: null
+      });
+    },
+    get C26() {
+      return C[26] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "decoration",
+        [_Location_column]: 13,
+        [_Location_line]: 50,
+        [_Location_file]: null
+      });
+    },
+    get C27() {
+      return C[27] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 13,
+        [_Location_line]: 57,
+        [_Location_file]: null
+      });
+    },
+    get C24() {
+      return C[24] = dart.constList([C[25] || CT.C25, C[26] || CT.C26, C[27] || CT.C27], widget_inspector._Location);
+    },
+    get C23() {
+      return C[23] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[24] || CT.C24,
+        [_Location_name]: null,
+        [_Location_column]: 18,
+        [_Location_line]: 48,
+        [_Location_file]: "file:///C:/Users/User/Desktop/Projetos/Projetos%20Mobile/quiz/lib/pages/challenge/widgets/answer/answer.dart"
+      });
+    },
+    get C30() {
+      return C[30] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "onTap",
+        [_Location_column]: 11,
+        [_Location_line]: 47,
+        [_Location_file]: null
+      });
+    },
+    get C31() {
+      return C[31] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 11,
+        [_Location_line]: 48,
+        [_Location_file]: null
+      });
+    },
+    get C29() {
+      return C[29] = dart.constList([C[30] || CT.C30, C[31] || CT.C31], widget_inspector._Location);
+    },
+    get C28() {
+      return C[28] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[29] || CT.C29,
+        [_Location_name]: null,
+        [_Location_column]: 16,
+        [_Location_line]: 46,
+        [_Location_file]: "file:///C:/Users/User/Desktop/Projetos/Projetos%20Mobile/quiz/lib/pages/challenge/widgets/answer/answer.dart"
+      });
+    },
+    get C34() {
+      return C[34] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "ignoring",
+        [_Location_column]: 9,
+        [_Location_line]: 45,
+        [_Location_file]: null
+      });
+    },
+    get C35() {
+      return C[35] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 9,
+        [_Location_line]: 46,
+        [_Location_file]: null
+      });
+    },
+    get C33() {
+      return C[33] = dart.constList([C[34] || CT.C34, C[35] || CT.C35], widget_inspector._Location);
+    },
+    get C32() {
+      return C[32] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[33] || CT.C33,
+        [_Location_name]: null,
+        [_Location_column]: 14,
+        [_Location_line]: 44,
+        [_Location_file]: "file:///C:/Users/User/Desktop/Projetos/Projetos%20Mobile/quiz/lib/pages/challenge/widgets/answer/answer.dart"
+      });
+    },
+    get C38() {
+      return C[38] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "padding",
+        [_Location_column]: 7,
+        [_Location_line]: 43,
+        [_Location_file]: null
+      });
+    },
+    get C39() {
+      return C[39] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 7,
+        [_Location_line]: 44,
+        [_Location_file]: null
+      });
+    },
+    get C37() {
+      return C[37] = dart.constList([C[38] || CT.C38, C[39] || CT.C39], widget_inspector._Location);
+    },
+    get C36() {
+      return C[36] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[37] || CT.C37,
+        [_Location_name]: null,
+        [_Location_column]: 12,
+        [_Location_line]: 42,
+        [_Location_file]: "file:///C:/Users/User/Desktop/Projetos/Projetos%20Mobile/quiz/lib/pages/challenge/widgets/answer/answer.dart"
+      });
+    }
+  }, false);
+  var C = Array(40).fill(void 0);
+  var I = [
+    "file:///C:/Users/User/Desktop/Projetos/Projetos%20Mobile/quiz/lib/pages/challenge/widgets/answer/answer.dart",
+    "package:quiz_dev/pages/challenge/widgets/answer/answer.dart"
+  ];
+  var answer$0 = dart.privateName(answer$, "AnswerWidget.answer");
+  var isSelected$ = dart.privateName(answer$, "AnswerWidget.isSelected");
+  var disabled$ = dart.privateName(answer$, "AnswerWidget.disabled");
+  var onTap$ = dart.privateName(answer$, "AnswerWidget.onTap");
+  var _selectedColorRight = dart.privateName(answer$, "_selectedColorRight");
+  var _selectedBorderRight = dart.privateName(answer$, "_selectedBorderRight");
+  var _selectedColorCardRight = dart.privateName(answer$, "_selectedColorCardRight");
+  var _selectedBorderCardRight = dart.privateName(answer$, "_selectedBorderCardRight");
+  var _selectedTextStyleRight = dart.privateName(answer$, "_selectedTextStyleRight");
+  var _selectedIconRight = dart.privateName(answer$, "_selectedIconRight");
+  var EdgeInsets_bottom = dart.privateName(edge_insets, "EdgeInsets.bottom");
+  var EdgeInsets_right = dart.privateName(edge_insets, "EdgeInsets.right");
+  var EdgeInsets_top = dart.privateName(edge_insets, "EdgeInsets.top");
+  var EdgeInsets_left = dart.privateName(edge_insets, "EdgeInsets.left");
+  var _Location_parameterLocations = dart.privateName(widget_inspector, "_Location.parameterLocations");
+  var _Location_name = dart.privateName(widget_inspector, "_Location.name");
+  var _Location_column = dart.privateName(widget_inspector, "_Location.column");
+  var _Location_line = dart.privateName(widget_inspector, "_Location.line");
+  var _Location_file = dart.privateName(widget_inspector, "_Location.file");
+  answer$.AnswerWidget = class AnswerWidget extends framework.StatelessWidget {
+    get answer() {
+      return this[answer$0];
+    }
+    set answer(value) {
+      super.answer = value;
+    }
+    get isSelected() {
+      return this[isSelected$];
+    }
+    set isSelected(value) {
+      super.isSelected = value;
+    }
+    get disabled() {
+      return this[disabled$];
+    }
+    set disabled(value) {
+      super.disabled = value;
+    }
+    get onTap() {
+      return this[onTap$];
+    }
+    set onTap(value) {
+      super.onTap = value;
+    }
+    get [_selectedColorRight]() {
+      return dart.test(this.answer.isCorrect) ? app_colors.AppColors.darkGreen : app_colors.AppColors.darkRed;
+    }
+    get [_selectedBorderRight]() {
+      return dart.test(this.answer.isCorrect) ? app_colors.AppColors.lightGreen : app_colors.AppColors.lightRed;
+    }
+    get [_selectedColorCardRight]() {
+      return dart.test(this.answer.isCorrect) ? app_colors.AppColors.lightGreen : app_colors.AppColors.lightRed;
+    }
+    get [_selectedBorderCardRight]() {
+      return dart.test(this.answer.isCorrect) ? app_colors.AppColors.green : app_colors.AppColors.red;
+    }
+    get [_selectedTextStyleRight]() {
+      return dart.test(this.answer.isCorrect) ? app_text_styles.AppTextStyles.bodyDarkGreen : app_text_styles.AppTextStyles.bodyDarkRed;
+    }
+    get [_selectedIconRight]() {
+      return dart.test(this.answer.isCorrect) ? icons.Icons.check : icons.Icons.close;
+    }
+    build(context) {
+      if (context == null) dart.nullFailed(I[0], 41, 29, "context");
+      return new basic.Padding.new({padding: C[0] || CT.C0, child: new basic.IgnorePointer.new({ignoring: this.disabled, child: new gesture_detector.GestureDetector.new({onTap: this.onTap, child: new container.Container.new({padding: new edge_insets.EdgeInsets.all(16.0), decoration: new box_decoration.BoxDecoration.new({color: dart.test(this.isSelected) ? this[_selectedColorCardRight] : app_colors.AppColors.white, borderRadius: new border_radius.BorderRadius.circular(10.0), border: new box_border.Border.fromBorderSide(new borders.BorderSide.new({color: dart.test(this.isSelected) ? this[_selectedBorderCardRight] : app_colors.AppColors.border}))}), child: new basic.Row.new({mainAxisAlignment: flex.MainAxisAlignment.spaceBetween, children: T.JSArrayOfWidget().of([new basic.Expanded.new({child: new text.Text.new(this.answer.title, {style: dart.test(this.isSelected) ? this[_selectedTextStyleRight] : app_text_styles.AppTextStyles.body, $creationLocationd_0dea112b090073317d4: C[1] || CT.C1}), $creationLocationd_0dea112b090073317d4: C[5] || CT.C5}), new container.Container.new({height: 24.0, width: 24.0, decoration: new box_decoration.BoxDecoration.new({color: dart.test(this.isSelected) ? this[_selectedColorRight] : app_colors.AppColors.white, borderRadius: new border_radius.BorderRadius.circular(100.0), border: new box_border.Border.fromBorderSide(new borders.BorderSide.new({color: dart.test(this.isSelected) ? this[_selectedBorderRight] : app_colors.AppColors.border}))}), child: dart.test(this.isSelected) ? new icon.Icon.new(this[_selectedIconRight], {size: 16.0, color: colors.Colors.white, $creationLocationd_0dea112b090073317d4: C[8] || CT.C8}) : null, $creationLocationd_0dea112b090073317d4: C[13] || CT.C13})]), $creationLocationd_0dea112b090073317d4: C[19] || CT.C19}), $creationLocationd_0dea112b090073317d4: C[23] || CT.C23}), $creationLocationd_0dea112b090073317d4: C[28] || CT.C28}), $creationLocationd_0dea112b090073317d4: C[32] || CT.C32}), $creationLocationd_0dea112b090073317d4: C[36] || CT.C36});
+    }
+  };
+  (answer$.AnswerWidget.new = function(opts) {
+    let key = opts && 'key' in opts ? opts.key : null;
+    let answer = opts && 'answer' in opts ? opts.answer : null;
+    if (answer == null) dart.nullFailed(I[0], 15, 19, "answer");
+    let isSelected = opts && 'isSelected' in opts ? opts.isSelected : false;
+    if (isSelected == null) dart.nullFailed(I[0], 16, 10, "isSelected");
+    let disabled = opts && 'disabled' in opts ? opts.disabled : false;
+    if (disabled == null) dart.nullFailed(I[0], 17, 10, "disabled");
+    let onTap = opts && 'onTap' in opts ? opts.onTap : null;
+    if (onTap == null) dart.nullFailed(I[0], 18, 19, "onTap");
+    let $36creationLocationd_0dea112b090073317d4 = opts && '$creationLocationd_0dea112b090073317d4' in opts ? opts.$creationLocationd_0dea112b090073317d4 : null;
+    this[answer$0] = answer;
+    this[isSelected$] = isSelected;
+    this[disabled$] = disabled;
+    this[onTap$] = onTap;
+    answer$.AnswerWidget.__proto__.new.call(this, {key: key, $creationLocationd_0dea112b090073317d4: $36creationLocationd_0dea112b090073317d4});
+    ;
+  }).prototype = answer$.AnswerWidget.prototype;
+  dart.addTypeTests(answer$.AnswerWidget);
+  dart.addTypeCaches(answer$.AnswerWidget);
+  dart.setMethodSignature(answer$.AnswerWidget, () => ({
+    __proto__: dart.getMethods(answer$.AnswerWidget.__proto__),
+    build: dart.fnType(framework.Widget, [framework.BuildContext])
+  }));
+  dart.setGetterSignature(answer$.AnswerWidget, () => ({
+    __proto__: dart.getGetters(answer$.AnswerWidget.__proto__),
+    [_selectedColorRight]: ui.Color,
+    [_selectedBorderRight]: ui.Color,
+    [_selectedColorCardRight]: ui.Color,
+    [_selectedBorderCardRight]: ui.Color,
+    [_selectedTextStyleRight]: text_style.TextStyle,
+    [_selectedIconRight]: icon_data.IconData
+  }));
+  dart.setLibraryUri(answer$.AnswerWidget, I[1]);
+  dart.setFieldSignature(answer$.AnswerWidget, () => ({
+    __proto__: dart.getFields(answer$.AnswerWidget.__proto__),
+    answer: dart.finalFieldType(answer_model.AnswerModel),
+    isSelected: dart.finalFieldType(core.bool),
+    disabled: dart.finalFieldType(core.bool),
+    onTap: dart.finalFieldType(dart.fnType(dart.void, []))
+  }));
+  dart.trackLibraries("packages/quiz_dev/pages/challenge/widgets/answer/answer.dart", {
+    "package:quiz_dev/pages/challenge/widgets/answer/answer.dart": answer$
+  }, {
+  }, '{"version":3,"sourceRoot":"","sources":["answer.dart"],"names":[],"mappings":";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;IAOoB;;;;;;IACP;;;;;;IACA;;;;;;IACQ;;;;;;;AAWf,uBAAA,AAAO,yBAAsB,iCAAsB;IAAO;;AAG1D,uBAAA,AAAO,yBAAsB,kCAAuB;IAAQ;;AAG5D,uBAAA,AAAO,yBAAsB,kCAAuB;IAAQ;;AAG5D,uBAAA,AAAO,yBAAsB,6BAAkB;IAAG;;AAEb,uBAAA,AAAO,yBAC5B,8CACA;IAAW;;AAG3B,uBAAA,AAAO,yBAAkB,oBAAc;IAAK;;UAGtB;AACxB,YAAO,uDAEE,uCACK,sBACH,iDACE,mBACA,sCACe,+BAAI,mBACZ,uDACD,mBAAa,gCAAoC,0CAC7B,wCAAS,eACrB,qCAAe,6CAExB,mBAAa,iCAAqC,yCAErD,sCACgC,+CAC3B,wBACR,+BACS,kBACL,AAAO,qCACA,mBACD,gCACc,sJAGxB,qCACU,aACD,kBACK,uDACH,mBAAa,4BAAgC,0CACzB,wCAAS,gBACrB,qCACb,6CACS,mBACD,6BACU,mDAIf,mBACD,kBACE,iCACM,aACQ,+EAEhB;IAQtB;;;QAlFO;QACS;;QACT;;QACA;;QACS;;;IAHA;IACT;IACA;IACS;AACX,wDAAW,GAAG;;EAAC","file":"../../../../../../../../../../../packages/quiz_dev/pages/challenge/widgets/answer/answer.dart.lib.js"}');
+  // Exports:
+  return {
+    pages__challenge__widgets__answer__answer: answer$
+  };
+}));
+
+//# sourceMappingURL=answer.dart.lib.js.map

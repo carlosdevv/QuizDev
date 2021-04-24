@@ -1,0 +1,770 @@
+define(['dart_sdk', 'packages/flutter/src/widgets/widget_span.dart', 'packages/quiz_dev/global/models/question_model.dart', 'packages/quiz_dev/pages/challenge/challenge_controller.dart', 'packages/flutter/src/widgets/page_view.dart', 'packages/flutter/src/material/icon_button.dart', 'packages/flutter/src/widgets/preferred_size.dart', 'packages/flutter/src/widgets/safe_area.dart', 'packages/flutter/src/widgets/value_listenable_builder.dart', 'packages/quiz_dev/pages/challenge/widgets/question_indicator/question_indicator.dart', 'packages/quiz_dev/pages/challenge/widgets/quiz/quiz.dart', 'packages/flutter/src/painting/edge_insets.dart', 'packages/flutter/src/rendering/flex.dart', 'packages/quiz_dev/pages/challenge/widgets/next_button/next_button.dart', 'packages/flutter/src/animation/curves.dart'], (function load__packages__quiz_dev__pages__challenge__challenge_page_dart(dart_sdk, packages__flutter__src__widgets__widget_span$46dart, packages__quiz_dev__global__models__question_model$46dart, packages__quiz_dev__pages__challenge__challenge_controller$46dart, packages__flutter__src__widgets__page_view$46dart, packages__flutter__src__material__icon_button$46dart, packages__flutter__src__widgets__preferred_size$46dart, packages__flutter__src__widgets__safe_area$46dart, packages__flutter__src__widgets__value_listenable_builder$46dart, packages__quiz_dev__pages__challenge__widgets__question_indicator__question_indicator$46dart, packages__quiz_dev__pages__challenge__widgets__quiz__quiz$46dart, packages__flutter__src__painting__edge_insets$46dart, packages__flutter__src__rendering__flex$46dart, packages__quiz_dev__pages__challenge__widgets__next_button__next_button$46dart, packages__flutter__src__animation__curves$46dart) {
+  'use strict';
+  const core = dart_sdk.core;
+  const ui = dart_sdk.ui;
+  const _interceptors = dart_sdk._interceptors;
+  const dart = dart_sdk.dart;
+  const dartx = dart_sdk.dartx;
+  const framework = packages__flutter__src__widgets__widget_span$46dart.src__widgets__framework;
+  const basic = packages__flutter__src__widgets__widget_span$46dart.src__widgets__basic;
+  const widget_inspector = packages__flutter__src__widgets__widget_span$46dart.src__widgets__widget_inspector;
+  const scroll_physics = packages__flutter__src__widgets__widget_span$46dart.src__widgets__scroll_physics;
+  const navigator = packages__flutter__src__widgets__widget_span$46dart.src__widgets__navigator;
+  const question_model = packages__quiz_dev__global__models__question_model$46dart.global__models__question_model;
+  const challenge_controller = packages__quiz_dev__pages__challenge__challenge_controller$46dart.pages__challenge__challenge_controller;
+  const page_view = packages__flutter__src__widgets__page_view$46dart.src__widgets__page_view;
+  const scaffold = packages__flutter__src__material__icon_button$46dart.src__material__scaffold;
+  const preferred_size = packages__flutter__src__widgets__preferred_size$46dart.src__widgets__preferred_size;
+  const safe_area = packages__flutter__src__widgets__safe_area$46dart.src__widgets__safe_area;
+  const value_listenable_builder = packages__flutter__src__widgets__value_listenable_builder$46dart.src__widgets__value_listenable_builder;
+  const question_indicator = packages__quiz_dev__pages__challenge__widgets__question_indicator__question_indicator$46dart.pages__challenge__widgets__question_indicator__question_indicator;
+  const quiz = packages__quiz_dev__pages__challenge__widgets__quiz__quiz$46dart.pages__challenge__widgets__quiz__quiz;
+  const edge_insets = packages__flutter__src__painting__edge_insets$46dart.src__painting__edge_insets;
+  const flex = packages__flutter__src__rendering__flex$46dart.src__rendering__flex;
+  const next_button = packages__quiz_dev__pages__challenge__widgets__next_button__next_button$46dart.pages__challenge__widgets__next_button__next_button;
+  const curves = packages__flutter__src__animation__curves$46dart.src__animation__curves;
+  var challenge_page = Object.create(dart.library);
+  var $toInt = dartx.toInt;
+  var $length = dartx.length;
+  var $map = dartx.map;
+  var $toList = dartx.toList;
+  dart._checkModuleNullSafetyMode(true);
+  var T = {
+    VoidTovoid: () => (T.VoidTovoid = dart.constFn(dart.fnType(dart.void, [])))(),
+    ValueListenableBuilderOfint: () => (T.ValueListenableBuilderOfint = dart.constFn(value_listenable_builder.ValueListenableBuilder$(core.int)))(),
+    WidgetN: () => (T.WidgetN = dart.constFn(dart.nullable(framework.Widget)))(),
+    BuildContextAndintAndWidgetNToQuestionIndicatorWidget: () => (T.BuildContextAndintAndWidgetNToQuestionIndicatorWidget = dart.constFn(dart.fnType(question_indicator.QuestionIndicatorWidget, [framework.BuildContext, core.int, T.WidgetN()])))(),
+    JSArrayOfWidget: () => (T.JSArrayOfWidget = dart.constFn(_interceptors.JSArray$(framework.Widget)))(),
+    QuestionModelToQuizWidget: () => (T.QuestionModelToQuizWidget = dart.constFn(dart.fnType(quiz.QuizWidget, [question_model.QuestionModel])))(),
+    ObjectN: () => (T.ObjectN = dart.constFn(dart.nullable(core.Object)))(),
+    BuildContextAndintAndWidgetNToExpanded: () => (T.BuildContextAndintAndWidgetNToExpanded = dart.constFn(dart.fnType(basic.Expanded, [framework.BuildContext, core.int, T.WidgetN()])))()
+  };
+  var T$Eval = Object.assign({
+    _: () => T$Eval
+  }, T);
+  var S = {
+    _: () => S
+  };
+  var S$Eval = Object.assign({
+    _: () => S$Eval
+  }, S);
+  const CT = Object.create({
+    _: () => (C, CT)
+  });
+  dart.defineLazy(CT, {
+    get C2() {
+      return C[2] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "currentPage",
+        [_Location_column]: 21,
+        [_Location_line]: 48,
+        [_Location_file]: null
+      });
+    },
+    get C3() {
+      return C[3] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "length",
+        [_Location_column]: 21,
+        [_Location_line]: 49,
+        [_Location_file]: null
+      });
+    },
+    get C1() {
+      return C[1] = dart.constList([C[2] || CT.C2, C[3] || CT.C3], widget_inspector._Location);
+    },
+    get C0() {
+      return C[0] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[1] || CT.C1,
+        [_Location_name]: null,
+        [_Location_column]: 51,
+        [_Location_line]: 47,
+        [_Location_file]: "file:///C:/Users/User/Desktop/Projetos/Projetos%20Mobile/quiz/lib/pages/challenge/challenge_page.dart"
+      });
+    },
+    get C6() {
+      return C[6] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "valueListenable",
+        [_Location_column]: 19,
+        [_Location_line]: 46,
+        [_Location_file]: null
+      });
+    },
+    get C7() {
+      return C[7] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "builder",
+        [_Location_column]: 19,
+        [_Location_line]: 47,
+        [_Location_file]: null
+      });
+    },
+    get C5() {
+      return C[5] = dart.constList([C[6] || CT.C6, C[7] || CT.C7], widget_inspector._Location);
+    },
+    get C4() {
+      return C[4] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[5] || CT.C5,
+        [_Location_name]: null,
+        [_Location_column]: 17,
+        [_Location_line]: 45,
+        [_Location_file]: "file:///C:/Users/User/Desktop/Projetos/Projetos%20Mobile/quiz/lib/pages/challenge/challenge_page.dart"
+      });
+    },
+    get C10() {
+      return C[10] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "children",
+        [_Location_column]: 15,
+        [_Location_line]: 43,
+        [_Location_file]: null
+      });
+    },
+    get C9() {
+      return C[9] = dart.constList([C[10] || CT.C10], widget_inspector._Location);
+    },
+    get C8() {
+      return C[8] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[9] || CT.C9,
+        [_Location_name]: null,
+        [_Location_column]: 20,
+        [_Location_line]: 42,
+        [_Location_file]: "file:///C:/Users/User/Desktop/Projetos/Projetos%20Mobile/quiz/lib/pages/challenge/challenge_page.dart"
+      });
+    },
+    get C13() {
+      return C[13] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "top",
+        [_Location_column]: 13,
+        [_Location_line]: 41,
+        [_Location_file]: null
+      });
+    },
+    get C14() {
+      return C[14] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 13,
+        [_Location_line]: 42,
+        [_Location_file]: null
+      });
+    },
+    get C12() {
+      return C[12] = dart.constList([C[13] || CT.C13, C[14] || CT.C14], widget_inspector._Location);
+    },
+    get C11() {
+      return C[11] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[12] || CT.C12,
+        [_Location_name]: null,
+        [_Location_column]: 16,
+        [_Location_line]: 40,
+        [_Location_file]: "file:///C:/Users/User/Desktop/Projetos/Projetos%20Mobile/quiz/lib/pages/challenge/challenge_page.dart"
+      });
+    },
+    get C17() {
+      return C[17] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "preferredSize",
+        [_Location_column]: 9,
+        [_Location_line]: 39,
+        [_Location_file]: null
+      });
+    },
+    get C18() {
+      return C[18] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 9,
+        [_Location_line]: 40,
+        [_Location_file]: null
+      });
+    },
+    get C16() {
+      return C[16] = dart.constList([C[17] || CT.C17, C[18] || CT.C18], widget_inspector._Location);
+    },
+    get C15() {
+      return C[15] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[16] || CT.C16,
+        [_Location_name]: null,
+        [_Location_column]: 15,
+        [_Location_line]: 38,
+        [_Location_file]: "file:///C:/Users/User/Desktop/Projetos/Projetos%20Mobile/quiz/lib/pages/challenge/challenge_page.dart"
+      });
+    },
+    get C21() {
+      return C[21] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "question",
+        [_Location_column]: 58,
+        [_Location_line]: 58,
+        [_Location_file]: null
+      });
+    },
+    get C20() {
+      return C[20] = dart.constList([C[21] || CT.C21], widget_inspector._Location);
+    },
+    get C19() {
+      return C[19] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[20] || CT.C20,
+        [_Location_name]: null,
+        [_Location_column]: 47,
+        [_Location_line]: 58,
+        [_Location_file]: "file:///C:/Users/User/Desktop/Projetos/Projetos%20Mobile/quiz/lib/pages/challenge/challenge_page.dart"
+      });
+    },
+    get C24() {
+      return C[24] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "physics",
+        [_Location_column]: 9,
+        [_Location_line]: 56,
+        [_Location_file]: null
+      });
+    },
+    get C25() {
+      return C[25] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "controller",
+        [_Location_column]: 9,
+        [_Location_line]: 57,
+        [_Location_file]: null
+      });
+    },
+    get C26() {
+      return C[26] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "children",
+        [_Location_column]: 9,
+        [_Location_line]: 58,
+        [_Location_file]: null
+      });
+    },
+    get C23() {
+      return C[23] = dart.constList([C[24] || CT.C24, C[25] || CT.C25, C[26] || CT.C26], widget_inspector._Location);
+    },
+    get C22() {
+      return C[22] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[23] || CT.C23,
+        [_Location_name]: null,
+        [_Location_column]: 13,
+        [_Location_line]: 55,
+        [_Location_file]: "file:///C:/Users/User/Desktop/Projetos/Projetos%20Mobile/quiz/lib/pages/challenge/challenge_page.dart"
+      });
+    },
+    get C27() {
+      return C[27] = dart.const({
+        __proto__: edge_insets.EdgeInsets.prototype,
+        [EdgeInsets_bottom]: 6,
+        [EdgeInsets_right]: 20,
+        [EdgeInsets_top]: 6,
+        [EdgeInsets_left]: 20
+      });
+    },
+    get C30() {
+      return C[30] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "label",
+        [_Location_column]: 17,
+        [_Location_line]: 69,
+        [_Location_file]: null
+      });
+    },
+    get C31() {
+      return C[31] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "onTap",
+        [_Location_column]: 17,
+        [_Location_line]: 70,
+        [_Location_file]: null
+      });
+    },
+    get C29() {
+      return C[29] = dart.constList([C[30] || CT.C30, C[31] || CT.C31], widget_inspector._Location);
+    },
+    get C28() {
+      return C[28] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[29] || CT.C29,
+        [_Location_name]: null,
+        [_Location_column]: 43,
+        [_Location_line]: 68,
+        [_Location_file]: "file:///C:/Users/User/Desktop/Projetos/Projetos%20Mobile/quiz/lib/pages/challenge/challenge_page.dart"
+      });
+    },
+    get C34() {
+      return C[34] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 19,
+        [_Location_line]: 68,
+        [_Location_file]: null
+      });
+    },
+    get C33() {
+      return C[33] = dart.constList([C[34] || CT.C34], widget_inspector._Location);
+    },
+    get C32() {
+      return C[32] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[33] || CT.C33,
+        [_Location_name]: null,
+        [_Location_column]: 15,
+        [_Location_line]: 67,
+        [_Location_file]: "file:///C:/Users/User/Desktop/Projetos/Projetos%20Mobile/quiz/lib/pages/challenge/challenge_page.dart"
+      });
+    },
+    get C37() {
+      return C[37] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "width",
+        [_Location_column]: 24,
+        [_Location_line]: 80,
+        [_Location_file]: null
+      });
+    },
+    get C36() {
+      return C[36] = dart.constList([C[37] || CT.C37], widget_inspector._Location);
+    },
+    get C35() {
+      return C[35] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[36] || CT.C36,
+        [_Location_name]: null,
+        [_Location_column]: 15,
+        [_Location_line]: 80,
+        [_Location_file]: "file:///C:/Users/User/Desktop/Projetos/Projetos%20Mobile/quiz/lib/pages/challenge/challenge_page.dart"
+      });
+    },
+    get C40() {
+      return C[40] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "label",
+        [_Location_column]: 25,
+        [_Location_line]: 86,
+        [_Location_file]: null
+      });
+    },
+    get C41() {
+      return C[41] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "onTap",
+        [_Location_column]: 25,
+        [_Location_line]: 87,
+        [_Location_file]: null
+      });
+    },
+    get C39() {
+      return C[39] = dart.constList([C[40] || CT.C40, C[41] || CT.C41], widget_inspector._Location);
+    },
+    get C38() {
+      return C[38] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[39] || CT.C39,
+        [_Location_name]: null,
+        [_Location_column]: 49,
+        [_Location_line]: 85,
+        [_Location_file]: "file:///C:/Users/User/Desktop/Projetos/Projetos%20Mobile/quiz/lib/pages/challenge/challenge_page.dart"
+      });
+    },
+    get C44() {
+      return C[44] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 25,
+        [_Location_line]: 85,
+        [_Location_file]: null
+      });
+    },
+    get C43() {
+      return C[43] = dart.constList([C[44] || CT.C44], widget_inspector._Location);
+    },
+    get C42() {
+      return C[42] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[43] || CT.C43,
+        [_Location_name]: null,
+        [_Location_column]: 23,
+        [_Location_line]: 84,
+        [_Location_file]: "file:///C:/Users/User/Desktop/Projetos/Projetos%20Mobile/quiz/lib/pages/challenge/challenge_page.dart"
+      });
+    },
+    get C47() {
+      return C[47] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "label",
+        [_Location_column]: 25,
+        [_Location_line]: 95,
+        [_Location_file]: null
+      });
+    },
+    get C48() {
+      return C[48] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "onTap",
+        [_Location_column]: 25,
+        [_Location_line]: 96,
+        [_Location_file]: null
+      });
+    },
+    get C46() {
+      return C[46] = dart.constList([C[47] || CT.C47, C[48] || CT.C48], widget_inspector._Location);
+    },
+    get C45() {
+      return C[45] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[46] || CT.C46,
+        [_Location_name]: null,
+        [_Location_column]: 49,
+        [_Location_line]: 94,
+        [_Location_file]: "file:///C:/Users/User/Desktop/Projetos/Projetos%20Mobile/quiz/lib/pages/challenge/challenge_page.dart"
+      });
+    },
+    get C51() {
+      return C[51] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 25,
+        [_Location_line]: 94,
+        [_Location_file]: null
+      });
+    },
+    get C50() {
+      return C[50] = dart.constList([C[51] || CT.C51], widget_inspector._Location);
+    },
+    get C49() {
+      return C[49] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[50] || CT.C50,
+        [_Location_name]: null,
+        [_Location_column]: 23,
+        [_Location_line]: 93,
+        [_Location_file]: "file:///C:/Users/User/Desktop/Projetos/Projetos%20Mobile/quiz/lib/pages/challenge/challenge_page.dart"
+      });
+    },
+    get C54() {
+      return C[54] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "valueListenable",
+        [_Location_column]: 17,
+        [_Location_line]: 82,
+        [_Location_file]: null
+      });
+    },
+    get C55() {
+      return C[55] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "builder",
+        [_Location_column]: 17,
+        [_Location_line]: 83,
+        [_Location_file]: null
+      });
+    },
+    get C53() {
+      return C[53] = dart.constList([C[54] || CT.C54, C[55] || CT.C55], widget_inspector._Location);
+    },
+    get C52() {
+      return C[52] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[53] || CT.C53,
+        [_Location_name]: null,
+        [_Location_column]: 15,
+        [_Location_line]: 81,
+        [_Location_file]: "file:///C:/Users/User/Desktop/Projetos/Projetos%20Mobile/quiz/lib/pages/challenge/challenge_page.dart"
+      });
+    },
+    get C58() {
+      return C[58] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "mainAxisAlignment",
+        [_Location_column]: 13,
+        [_Location_line]: 65,
+        [_Location_file]: null
+      });
+    },
+    get C59() {
+      return C[59] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "children",
+        [_Location_column]: 13,
+        [_Location_line]: 66,
+        [_Location_file]: null
+      });
+    },
+    get C57() {
+      return C[57] = dart.constList([C[58] || CT.C58, C[59] || CT.C59], widget_inspector._Location);
+    },
+    get C56() {
+      return C[56] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[57] || CT.C57,
+        [_Location_name]: null,
+        [_Location_column]: 18,
+        [_Location_line]: 64,
+        [_Location_file]: "file:///C:/Users/User/Desktop/Projetos/Projetos%20Mobile/quiz/lib/pages/challenge/challenge_page.dart"
+      });
+    },
+    get C62() {
+      return C[62] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "padding",
+        [_Location_column]: 11,
+        [_Location_line]: 63,
+        [_Location_file]: null
+      });
+    },
+    get C63() {
+      return C[63] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 11,
+        [_Location_line]: 64,
+        [_Location_file]: null
+      });
+    },
+    get C61() {
+      return C[61] = dart.constList([C[62] || CT.C62, C[63] || CT.C63], widget_inspector._Location);
+    },
+    get C60() {
+      return C[60] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[61] || CT.C61,
+        [_Location_name]: null,
+        [_Location_column]: 16,
+        [_Location_line]: 62,
+        [_Location_file]: "file:///C:/Users/User/Desktop/Projetos/Projetos%20Mobile/quiz/lib/pages/challenge/challenge_page.dart"
+      });
+    },
+    get C66() {
+      return C[66] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "bottom",
+        [_Location_column]: 9,
+        [_Location_line]: 61,
+        [_Location_file]: null
+      });
+    },
+    get C67() {
+      return C[67] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 9,
+        [_Location_line]: 62,
+        [_Location_file]: null
+      });
+    },
+    get C65() {
+      return C[65] = dart.constList([C[66] || CT.C66, C[67] || CT.C67], widget_inspector._Location);
+    },
+    get C64() {
+      return C[64] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[65] || CT.C65,
+        [_Location_name]: null,
+        [_Location_column]: 28,
+        [_Location_line]: 60,
+        [_Location_file]: "file:///C:/Users/User/Desktop/Projetos/Projetos%20Mobile/quiz/lib/pages/challenge/challenge_page.dart"
+      });
+    },
+    get C70() {
+      return C[70] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "appBar",
+        [_Location_column]: 7,
+        [_Location_line]: 38,
+        [_Location_file]: null
+      });
+    },
+    get C71() {
+      return C[71] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "body",
+        [_Location_column]: 7,
+        [_Location_line]: 55,
+        [_Location_file]: null
+      });
+    },
+    get C72() {
+      return C[72] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "bottomNavigationBar",
+        [_Location_column]: 7,
+        [_Location_line]: 60,
+        [_Location_file]: null
+      });
+    },
+    get C69() {
+      return C[69] = dart.constList([C[70] || CT.C70, C[71] || CT.C71, C[72] || CT.C72], widget_inspector._Location);
+    },
+    get C68() {
+      return C[68] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[69] || CT.C69,
+        [_Location_name]: null,
+        [_Location_column]: 12,
+        [_Location_line]: 37,
+        [_Location_file]: "file:///C:/Users/User/Desktop/Projetos/Projetos%20Mobile/quiz/lib/pages/challenge/challenge_page.dart"
+      });
+    }
+  }, false);
+  var C = Array(73).fill(void 0);
+  var I = [
+    "file:///C:/Users/User/Desktop/Projetos/Projetos%20Mobile/quiz/lib/pages/challenge/challenge_page.dart",
+    "package:quiz_dev/pages/challenge/challenge_page.dart"
+  ];
+  var questions$ = dart.privateName(challenge_page, "ChallengePage.questions");
+  var percent$ = dart.privateName(challenge_page, "ChallengePage.percent");
+  challenge_page.ChallengePage = class ChallengePage extends framework.StatefulWidget {
+    get questions() {
+      return this[questions$];
+    }
+    set questions(value) {
+      super.questions = value;
+    }
+    get percent() {
+      return this[percent$];
+    }
+    set percent(value) {
+      super.percent = value;
+    }
+    createState() {
+      return new challenge_page._ChallengePageState.new();
+    }
+  };
+  (challenge_page.ChallengePage.new = function(opts) {
+    let key = opts && 'key' in opts ? opts.key : null;
+    let questions = opts && 'questions' in opts ? opts.questions : null;
+    if (questions == null) dart.nullFailed(I[0], 15, 19, "questions");
+    let percent = opts && 'percent' in opts ? opts.percent : null;
+    if (percent == null) dart.nullFailed(I[0], 16, 19, "percent");
+    let $36creationLocationd_0dea112b090073317d4 = opts && '$creationLocationd_0dea112b090073317d4' in opts ? opts.$creationLocationd_0dea112b090073317d4 : null;
+    this[questions$] = questions;
+    this[percent$] = percent;
+    challenge_page.ChallengePage.__proto__.new.call(this, {key: key, $creationLocationd_0dea112b090073317d4: $36creationLocationd_0dea112b090073317d4});
+    ;
+  }).prototype = challenge_page.ChallengePage.prototype;
+  dart.addTypeTests(challenge_page.ChallengePage);
+  dart.addTypeCaches(challenge_page.ChallengePage);
+  dart.setMethodSignature(challenge_page.ChallengePage, () => ({
+    __proto__: dart.getMethods(challenge_page.ChallengePage.__proto__),
+    createState: dart.fnType(challenge_page._ChallengePageState, [])
+  }));
+  dart.setLibraryUri(challenge_page.ChallengePage, I[1]);
+  dart.setFieldSignature(challenge_page.ChallengePage, () => ({
+    __proto__: dart.getFields(challenge_page.ChallengePage.__proto__),
+    questions: dart.finalFieldType(core.List$(question_model.QuestionModel)),
+    percent: dart.finalFieldType(core.double)
+  }));
+  var _Location_parameterLocations = dart.privateName(widget_inspector, "_Location.parameterLocations");
+  var _Location_name = dart.privateName(widget_inspector, "_Location.name");
+  var _Location_column = dart.privateName(widget_inspector, "_Location.column");
+  var _Location_line = dart.privateName(widget_inspector, "_Location.line");
+  var _Location_file = dart.privateName(widget_inspector, "_Location.file");
+  var EdgeInsets_bottom = dart.privateName(edge_insets, "EdgeInsets.bottom");
+  var EdgeInsets_right = dart.privateName(edge_insets, "EdgeInsets.right");
+  var EdgeInsets_top = dart.privateName(edge_insets, "EdgeInsets.top");
+  var EdgeInsets_left = dart.privateName(edge_insets, "EdgeInsets.left");
+  challenge_page._ChallengePageState = class _ChallengePageState extends framework.State$(challenge_page.ChallengePage) {
+    initState() {
+      this.pageController.addListener(dart.fn(() => {
+        this.controller.currentPage = dart.nullCheck(this.pageController.page)[$toInt]() + 1;
+      }, T.VoidTovoid()));
+      super.initState();
+    }
+    build(context) {
+      if (context == null) dart.nullFailed(I[0], 36, 29, "context");
+      return new scaffold.Scaffold.new({appBar: new preferred_size.PreferredSize.new({preferredSize: new ui.Size.fromHeight(60.0), child: new safe_area.SafeArea.new({top: true, child: new basic.Column.new({children: T.JSArrayOfWidget().of([new (T.ValueListenableBuilderOfint()).new({valueListenable: this.controller.currentPageNotifier, builder: dart.fn((context, value, _) => {
+                    if (context == null) dart.nullFailed(I[0], 47, 29, "context");
+                    if (value == null) dart.nullFailed(I[0], 47, 38, "value");
+                    return new question_indicator.QuestionIndicatorWidget.new({currentPage: value, length: this.widget.questions[$length], $creationLocationd_0dea112b090073317d4: C[0] || CT.C0});
+                  }, T.BuildContextAndintAndWidgetNToQuestionIndicatorWidget()), $creationLocationd_0dea112b090073317d4: C[4] || CT.C4})]), $creationLocationd_0dea112b090073317d4: C[8] || CT.C8}), $creationLocationd_0dea112b090073317d4: C[11] || CT.C11}), $creationLocationd_0dea112b090073317d4: C[15] || CT.C15}), body: new page_view.PageView.new({physics: new scroll_physics.NeverScrollableScrollPhysics.new(), controller: this.pageController, children: this.widget.questions[$map](quiz.QuizWidget, dart.fn(e => {
+            if (e == null) dart.nullFailed(I[0], 58, 41, "e");
+            return new quiz.QuizWidget.new({question: e, $creationLocationd_0dea112b090073317d4: C[19] || CT.C19});
+          }, T.QuestionModelToQuizWidget()))[$toList](), $creationLocationd_0dea112b090073317d4: C[22] || CT.C22}), bottomNavigationBar: new safe_area.SafeArea.new({bottom: true, child: new basic.Padding.new({padding: C[27] || CT.C27, child: new basic.Row.new({mainAxisAlignment: flex.MainAxisAlignment.spaceAround, children: T.JSArrayOfWidget().of([new basic.Expanded.new({child: new next_button.NextButtonWidget.white({label: "Voltar", onTap: dart.fn(() => {
+                      if (this.pageController.page === 0) {
+                        navigator.Navigator.pop(T.ObjectN(), context);
+                      } else {
+                        this.pageController.previousPage({duration: new core.Duration.new({milliseconds: 200}), curve: curves.Curves.linear});
+                      }
+                    }, T.VoidTovoid()), $creationLocationd_0dea112b090073317d4: C[28] || CT.C28}), $creationLocationd_0dea112b090073317d4: C[32] || CT.C32}), new basic.SizedBox.new({width: 7.0, $creationLocationd_0dea112b090073317d4: C[35] || CT.C35}), new (T.ValueListenableBuilderOfint()).new({valueListenable: this.controller.currentPageNotifier, builder: dart.fn((context, value, _) => {
+                    if (context == null) dart.nullFailed(I[0], 83, 27, "context");
+                    if (value == null) dart.nullFailed(I[0], 83, 36, "value");
+                    return value == this.widget.questions[$length] ? new basic.Expanded.new({child: new next_button.NextButtonWidget.green({label: "Confirmar", onTap: dart.fn(() => {
+                          this.pageController.nextPage({duration: new core.Duration.new({milliseconds: 200}), curve: curves.Curves.linear});
+                        }, T.VoidTovoid()), $creationLocationd_0dea112b090073317d4: C[38] || CT.C38}), $creationLocationd_0dea112b090073317d4: C[42] || CT.C42}) : new basic.Expanded.new({child: new next_button.NextButtonWidget.green({label: "Avançar", onTap: dart.fn(() => {
+                          this.pageController.nextPage({duration: new core.Duration.new({milliseconds: 200}), curve: curves.Curves.linear});
+                        }, T.VoidTovoid()), $creationLocationd_0dea112b090073317d4: C[45] || CT.C45}), $creationLocationd_0dea112b090073317d4: C[49] || CT.C49});
+                  }, T.BuildContextAndintAndWidgetNToExpanded()), $creationLocationd_0dea112b090073317d4: C[52] || CT.C52})]), $creationLocationd_0dea112b090073317d4: C[56] || CT.C56}), $creationLocationd_0dea112b090073317d4: C[60] || CT.C60}), $creationLocationd_0dea112b090073317d4: C[64] || CT.C64}), $creationLocationd_0dea112b090073317d4: C[68] || CT.C68});
+    }
+  };
+  (challenge_page._ChallengePageState.new = function() {
+    this.controller = new challenge_controller.ChallengeController.new();
+    this.pageController = new page_view.PageController.new();
+    challenge_page._ChallengePageState.__proto__.new.call(this);
+    ;
+  }).prototype = challenge_page._ChallengePageState.prototype;
+  dart.addTypeTests(challenge_page._ChallengePageState);
+  dart.addTypeCaches(challenge_page._ChallengePageState);
+  dart.setMethodSignature(challenge_page._ChallengePageState, () => ({
+    __proto__: dart.getMethods(challenge_page._ChallengePageState.__proto__),
+    build: dart.fnType(framework.Widget, [framework.BuildContext])
+  }));
+  dart.setLibraryUri(challenge_page._ChallengePageState, I[1]);
+  dart.setFieldSignature(challenge_page._ChallengePageState, () => ({
+    __proto__: dart.getFields(challenge_page._ChallengePageState.__proto__),
+    controller: dart.finalFieldType(challenge_controller.ChallengeController),
+    pageController: dart.finalFieldType(page_view.PageController)
+  }));
+  dart.trackLibraries("packages/quiz_dev/pages/challenge/challenge_page.dart", {
+    "package:quiz_dev/pages/challenge/challenge_page.dart": challenge_page
+  }, {
+  }, '{"version":3,"sourceRoot":"","sources":["challenge_page.dart"],"names":[],"mappings":";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;IAS4B;;;;;;IACb;;;;;;;AASwB;IAAqB;;;QANnD;QACS;;QACA;;;IADA;IACA;AACX,gEAAW,GAAG;;EAAC;;;;;;;;;;;;;;;;;;;;;;;;AAchB,MAFF,AAAe,gCAAY;AACgC,QAAzD,AAAW,8BAAiC,AAAE,AAAQ,eAA7B,AAAe,sCAAgB;;AAEzC,MAAX;IACR;;UAG0B;AACxB,YAAO,oCACG,qDACc,uBAAW,cACxB,iCACE,aACE,gCACK,wBAER,4DACmB,AAAW,8CACnB,SAAC,SAAS,OAAO;wBAAhB;wBAAS;AAAa,4FACjB,KAAK,UACV,AAAO,AAAU;iUAMjC,qCACK,mEACG,+BACF,AAAO,AAAU,AAAoC,6CAAhC;gBAAC;AAAM,sDAAqB,CAAC;yIAEzC,oCACX,aACD,wDAEE,sCACgC,8CAC3B,wBACR,+BAC4B,+CACnB,iBACA;AACL,0BAAI,AAAe,AAAK,6BAAG;AACH,wBAAZ,qCAAI,OAAO;;AAII,wBAFzB,AAAe,4CACD,qCAAuB,cACnB;;8JAIxB,+BAAgB,gEAChB,4DACmB,AAAW,8CACnB,SAAC,SAAS,OAAO;wBAAhB;wBAAS;AAAa,0BAAA,AAAM,MAAD,IAAI,AAAO,AAAU,iCACpD,+BAC0B,+CACjB,oBACA;AAGoB,0BAFzB,AAAe,wCACD,qCAAuB,cACnB;mKAGtB,+BAC0B,+CACjB,kBACA;AAGoB,0BAFzB,AAAe,wCACD,qCAAuB,cACnB;;;IAS1C;;;IApFM,kBAAa;IACb,sBAAiB;;;EAoFzB","file":"../../../../../../../../../packages/quiz_dev/pages/challenge/challenge_page.dart.lib.js"}');
+  // Exports:
+  return {
+    pages__challenge__challenge_page: challenge_page
+  };
+}));
+
+//# sourceMappingURL=challenge_page.dart.lib.js.map
